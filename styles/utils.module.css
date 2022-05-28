@@ -1,6 +1,13 @@
-.heading2Xl {
+.pageTitle2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
+  letter-spacing: -0.05rem;
+  margin: 1rem 0;
+  color: #5c65ff;
+}
+.pageTitleXl {
+  font-size: 1.5rem;
+  line-height: 1.3;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
   color: #5c65ff;
@@ -18,7 +25,6 @@
   font-size: 1.5rem;
   line-height: 1.4;
   margin: 1rem 0;
-  color: #5c65ff;
 }
 
 .headingMd {

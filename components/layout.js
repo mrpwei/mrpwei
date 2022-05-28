@@ -27,7 +27,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <h1
-            className={utilStyles.heading2Xl}
+            className={utilStyles.pageTitle2Xl}
             style={{
               fontFamily: "SourceCodePro-Regular",
               fontWeight: 200,
@@ -37,7 +37,7 @@ export default function Layout({ children, home }) {
           </h1>
         ) : (
           <h2
-            className={utilStyles.headingLg}
+            className={utilStyles.pageTitleXl}
             style={{
               fontFamily: "SourceCodePro-Regular",
               fontWeight: 400,
