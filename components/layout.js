@@ -26,7 +26,7 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <h1
+          <p
             className={utilStyles.heading2Xl}
             style={{
               fontFamily: "SourceCodePro-Regular",
@@ -34,7 +34,7 @@ export default function Layout({ children, home }) {
             }}
           >
             {name}
-          </h1>
+          </p>
         ) : (
           <h2
             className={utilStyles.headingLg}
