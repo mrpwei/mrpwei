@@ -3,8 +3,8 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "彭伟";
-export const siteTitle = "Code blog";
+const name = "peng.wei";
+export const siteTitle = "Peng Wei's blog";
 
 export default function Layout({ children, home }) {
   return (
@@ -26,9 +26,23 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <h1
+            className={utilStyles.heading2Xl}
+            style={{
+              fontFamily: "SourceCodePro-Light",
+              fontWeight: 400,
+            }}
+          >
+            {name}
+          </h1>
         ) : (
-          <h2 className={utilStyles.headingLg}>
+          <h2
+            className={utilStyles.headingLg}
+            style={{
+              fontFamily: "SourceCodePro-Light",
+              fontWeight: 400,
+            }}
+          >
             <Link href="/">
               <a className={utilStyles.colorInherit}>{name}</a>
             </Link>

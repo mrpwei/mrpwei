@@ -4,6 +4,18 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "SourceCode-Light";
+  src: url("../lib/SourceCodePro-Light.ttf") format("turetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SourceCodePro-ExtraLight";
+  src: url("../lib/SourceCodePro-ExtraLight.ttf") format("turetype");
+  font-display: swap;
+}
+
 html,
 body {
   padding: 0;
