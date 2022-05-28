@@ -26,26 +26,15 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <>
-            <h1
-              className={utilStyles.heading2Xl}
-              style={{
-                fontFamily: "SourceCodePro-Regular",
-                fontWeight: 400,
-              }}
-            >
-              {name}
-            </h1>
-            <h1
-              className={utilStyles.heading2Xl}
-              style={{
-                fontFamily: "SourceCodePro-Regular",
-                fontWeight: 400,
-              }}
-            >
-              peng.wei
-            </h1>
-          </>
+          <h1
+            className={utilStyles.heading2Xl}
+            style={{
+              fontFamily: "SourceCodePro-Regular",
+              fontWeight: 200,
+            }}
+          >
+            {name}
+          </h1>
         ) : (
           <h2
             className={utilStyles.headingLg}

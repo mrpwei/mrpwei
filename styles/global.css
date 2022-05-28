@@ -5,14 +5,14 @@
 }
 
 @font-face {
-  font-family: "SourceCode-Light";
+  font-family: "SourceCodePro-Light";
   src: url("../lib/SourceCodePro-Light.otf") format("opentype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "SourceCodePro-Regular";
-  src: url("../lib/SourceCodePro-Regular.otf") format("turetype");
+  src: url("../lib/SourceCodePro-Regular.otf") format("opentype");
   font-display: swap;
 }
 
