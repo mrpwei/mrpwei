@@ -6,13 +6,13 @@
 
 @font-face {
   font-family: "SourceCode-Light";
-  src: url("../lib/SourceCodePro-Light.ttf") format("turetype");
+  src: url("../lib/SourceCodePro-Light.otf") format("opentype");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "SourceCodePro-ExtraLight";
-  src: url("../lib/SourceCodePro-ExtraLight.ttf") format("turetype");
+  font-family: "SourceCodePro-Regular";
+  src: url("../lib/SourceCodePro-Regular.otf") format("turetype");
   font-display: swap;
 }
 

@@ -29,7 +29,7 @@ export default function Layout({ children, home }) {
           <h1
             className={utilStyles.heading2Xl}
             style={{
-              fontFamily: "SourceCodePro-Light",
+              fontFamily: "SourceCodePro-Regular",
               fontWeight: 400,
             }}
           >
@@ -39,7 +39,7 @@ export default function Layout({ children, home }) {
           <h2
             className={utilStyles.headingLg}
             style={{
-              fontFamily: "SourceCodePro-Light",
+              fontFamily: "SourceCodePro-Regular",
               fontWeight: 400,
             }}
           >
