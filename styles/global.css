@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Metric-Regular";
   src: url("../lib/Metric-Regular.otf") format("opentype");
@@ -32,8 +36,8 @@ body {
 }
 
 a {
-  /* color: #0070f3; */
-  color: #5c65ff;
+  color: #0070f3;
+  /* color: #5c65ff; */
   text-decoration: none;
 }
 

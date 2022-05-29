@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 
-const name = "peng.wei";
+const name = "<peng.wei/>";
 export const siteTitle = "Peng Wei's blog";
 
 export default function Layout({ children, home }) {
@@ -26,27 +26,24 @@ export default function Layout({ children, home }) {
       </Head>
       <header className={styles.header}>
         {home ? (
-          <h1
-            className={utilStyles.pageTitle2Xl}
-            style={{
-              fontFamily: "SourceCodePro-Regular",
-              fontWeight: 200,
-            }}
-          >
-            {name}
-          </h1>
+          <>
+            <img src="/images/banner-2.svg" />
+            <h1
+              className="text-4xl  bg-gradient-to-r from-sky-500 to-indigo-500"
+              style={{
+                fontFamily: "SourceCodePro-Regular",
+                fontWeight: 200,
+                WebkitBackgroundClip: "text",
+                color: "transparent",
+              }}
+            >
+              {name}
+            </h1>
+          </>
         ) : (
-          <h2
-            className={utilStyles.pageTitleXl}
-            style={{
-              fontFamily: "SourceCodePro-Regular",
-              fontWeight: 400,
-            }}
-          >
-            <Link href="/">
-              <a className={utilStyles.colorInherit}>{name}</a>
-            </Link>
-          </h2>
+          <>
+            <img src="/images/banner-3.svg" />
+          </>
         )}
       </header>
       <main>{children}</main>
