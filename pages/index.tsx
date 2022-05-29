@@ -20,11 +20,14 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      <section
+        className={utilStyles.headingMd}
+        style={{ fontSize: 18, fontWeight: 400, color: "#5c5c5c" }}
+      >
         <p>I'm a frontend programmer.</p>
         <p>
-          (This is a sample website - you'll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          This is my personal website - my notes and blogs. For more info, visit
+          my <a href="https://github.com/mrpwei">github</a>.
         </p>
       </section>
 
@@ -44,6 +47,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <img src="/images/divider-2.svg" />
     </Layout>
   );
 }
