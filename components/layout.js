@@ -24,6 +24,17 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <nav>
+        <Link href="/">
+          <a className="mx-2">Home</a>
+        </Link>
+        <Link href="/blog">
+          <a className="mx-2">Blog</a>
+        </Link>
+        <Link href="/wiki">
+          <a className="mx-2">Wiki</a>
+        </Link>
+      </nav>
       <header className={styles.header}>
         {home ? (
           <>
