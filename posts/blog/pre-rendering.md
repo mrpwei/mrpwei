@@ -19,12 +19,13 @@ export default function Date({ dateString }) {
 }
 ```
 
-> :Tabs
->
-> > :Tab title=First Tab
-> >
-> > Content of the first tab
->
-> > :Tab title=Second Tab
-> >
-> > Content of the second tab
+<details>
+  <summary>Click to expand!</summary>
+  
+  ## Heading
+  
+  1. A numbered
+  2. list
+    * With some
+    * Sub bullets
+</details>
