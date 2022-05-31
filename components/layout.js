@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
+import Image from "next/image";
 import Link from "next/link";
 
 const name = "<peng.wei/>";
@@ -24,37 +24,45 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <nav>
+      <nav className="flex h-8">
         <Link href="/">
-          <a className="mx-2">Home</a>
+          <a className="mx-2 leading-8">Home</a>
         </Link>
         <Link href="/blog">
-          <a className="mx-2">Blog</a>
+          <a className="mx-2 leading-8">Blog</a>
         </Link>
         <Link href="/wiki">
-          <a className="mx-2">Wiki</a>
+          <a className="mx-2 leading-8">Wiki</a>
+        </Link>
+        <Link href="/">
+          <a
+            className="text-l leading-8 bg-gradient-to-r from-sky-500 to-indigo-500"
+            style={{
+              fontFamily: "SourceCodePro-Regular",
+              fontWeight: 200,
+              WebkitBackgroundClip: "text",
+              color: "transparent",
+            }}
+          >
+            {name}
+          </a>
         </Link>
       </nav>
       <header className={styles.header}>
         {home ? (
-          <>
-            <img src="/images/banner-2.svg" />
-            <h1
-              className="text-4xl  bg-gradient-to-r from-sky-500 to-indigo-500"
-              style={{
-                fontFamily: "SourceCodePro-Regular",
-                fontWeight: 200,
-                WebkitBackgroundClip: "text",
-                color: "transparent",
-              }}
-            >
-              {name}
-            </h1>
-          </>
+          <Image
+            src="/images/banner-2.svg"
+            alt="banner-2"
+            width="600px"
+            height="300px"
+          />
         ) : (
-          <>
-            <img src="/images/banner-3.svg" />
-          </>
+          <Image
+            src="/images/banner-3.svg"
+            alt="banner-3"
+            width="600px"
+            height="300px"
+          />
         )}
       </header>
       <main>{children}</main>
