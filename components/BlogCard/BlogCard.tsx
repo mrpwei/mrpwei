@@ -10,7 +10,7 @@ export const BlogCard = ({ id, date, title, children }) => {
         </small>
         <p className="text-2xl text-[#202020]">{title}</p>
         <p>{children}</p>
-        <a>read all</a>
+        <a>Read full article</a>
       </div>
     </Link>
   );
