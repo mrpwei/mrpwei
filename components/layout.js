@@ -7,7 +7,7 @@ export const siteTitle = "Peng Wei's blog";
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <div className="max-w-3xl mx-auto my-6">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
