@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "./layout.module.css";
-import Image from "next/image";
 import Link from "next/link";
 
 const name = "<peng.wei/>";
@@ -50,15 +49,15 @@ export default function Layout({ children, home }) {
       </nav>
       <header className={styles.header}>
         {home ? (
-          <Image
-            src="/images/banner-2.svg"
+          <img
+            src={require("/public/images/banner-2.svg")}
             alt="banner-2"
             width="600px"
             height="300px"
           />
         ) : (
-          <Image
-            src="/images/banner-3.svg"
+          <img
+            src={require("/public/images/banner-3.svg")}
             alt="banner-3"
             width="600px"
             height="300px"
