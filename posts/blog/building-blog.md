@@ -17,10 +17,29 @@ yarn config set registry https://registry.npm.taobao.org/
 
 参考：[yarn 安装与换源](https://www.cnblogs.com/develon/p/13814675.html)
 
-css modules 和 Tailwind css 混用：
+`css modules` 和 `Tailwind css` 混用：
 
-```html
-<section className="{`${utilStyles.padding1px}" bg-slate-100`}>...</section>
+css modules:
+
+```js
+<section
+  className={utilStyles.headingMd}
+  style={{ fontSize: 18, fontWeight: 400, color: "#5c5c5c" }}
+>
+  ...
+</section>
+```
+
+Tailwind css:
+
+```js
+<p className="text-xl text-[#202020]">{title}</p>
+```
+
+混用：
+
+```js
+<section className={`${utilStyles.padding1px} bg-slate-100`}>...</section>
 ```
 
 ```bash

@@ -22,6 +22,7 @@ pre[class*="language-"] {
   word-wrap: break-word;
   background: #322931;
   color: #b9b5b8;
+  border-radius: 4px;
 }
 
 pre > code[class*="language-"] {
@@ -36,9 +37,16 @@ pre[class*="language-"] {
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
+/* :not(pre) > code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
+  background-color: rgb(254 215 170);
+} */
+:not(pre) > code {
+  padding: 0.1em;
+  border-radius: 0.3em;
+  background-color: rgb(255 237 213);
+  font-size: 15px;
 }
 
 .token.comment,
