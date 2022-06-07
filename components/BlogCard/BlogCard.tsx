@@ -3,15 +3,15 @@ import Date from "../date";
 
 export const BlogCard = ({ id, date, title, children }) => {
   return (
-    <Link href={`/blog/${id}`}>
-      <div className="h-40 p-2 hover:cursor-pointer hover:bg-slate-50 transition-all duration-300">
-        <small className="text-slate-200">
-          <Date dateString={date} />
-        </small>
-        <p className="text-2xl text-[#202020]">{title}</p>
-        <p>{children}</p>
+    <div className="p-2">
+      <small className="text-slate-200">
+        <Date dateString={date} />
+      </small>
+      <p className="text-xl text-[#202020]">{title}</p>
+      <p className="max-h-20 overflow-hidden text-slate-400">{children}</p>
+      <Link href={`/blog/${id}`}>
         <a>Read full article</a>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };

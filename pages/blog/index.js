@@ -21,15 +21,13 @@ export default function Blog({ allPostsData }) {
       </Head>
       <section>
         <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+        <div className="flex-auto">
           {allPostsData.map(({ id, date, title, excerpt }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <BlogCard id={id} date={date} title={title}>
-                {excerpt}
-              </BlogCard>
-            </li>
+            <BlogCard id={id} date={date} title={title} key={id}>
+              {excerpt}
+            </BlogCard>
           ))}
-        </ul>
+        </div>
       </section>
       <img src="/images/divider-2.svg" />
     </Layout>

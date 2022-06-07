@@ -10,7 +10,9 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1>{postData.title}</h1>
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+          {postData.title}
+        </h1>
         <div>
           <Date dateString={postData.date} />
         </div>

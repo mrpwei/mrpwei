@@ -38,3 +38,8 @@ ul {
   list-style-position: inside;
   margin-left: 0.75rem;
 }
+
+b,
+strong {
+  font-family: -webkit-body;
+}

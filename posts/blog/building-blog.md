@@ -22,3 +22,7 @@ css modules 和 Tailwind css 混用：
 ```jsx
 <section className={`${utilStyles.padding1px} bg-slate-100`}>...</section>
 ```
+
+```bash
+curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused
+```
