@@ -19,8 +19,8 @@ yarn config set registry https://registry.npm.taobao.org/
 
 css modules 和 Tailwind css 混用：
 
-```jsx
-<section className={`${utilStyles.padding1px} bg-slate-100`}>...</section>
+```html
+<section className="{`${utilStyles.padding1px}" bg-slate-100`}>...</section>
 ```
 
 ```bash

@@ -13,7 +13,7 @@ export default function Post({ postData }) {
         <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
           {postData.title}
         </h1>
-        <div>
+        <div className="h-12">
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
