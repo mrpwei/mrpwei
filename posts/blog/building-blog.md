@@ -3,8 +3,6 @@ title: "Building a personal website"
 date: "2022-05-30"
 ---
 
-[React + marked + prism.js](https://codesandbox.io/s/6wnxzllymr?file=/src/index.js)
-
 ## yarn 换源
 
 ### 查询与更换
@@ -45,3 +43,5 @@ Tailwind css:
 ```bash
 curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused
 ```
+
+[React + marked + prism.js](https://codesandbox.io/s/6wnxzllymr?file=/src/index.js)

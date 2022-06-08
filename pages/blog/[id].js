@@ -16,6 +16,19 @@ export default function Post({ postData }) {
         <div className="h-12">
           <Date dateString={postData.date} />
         </div>
+        <div className="flex flex-col">
+          {postData.toc.map((item) => (
+            <a
+              href={"#" + item.anchor}
+              className={`${
+                "anchor-" + item.level
+              } text-gray-500 hover:text-gray-800`}
+              key={item.anchor}
+            >
+              {item.text}
+            </a>
+          ))}
+        </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
     </Layout>

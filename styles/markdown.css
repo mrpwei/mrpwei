@@ -46,3 +46,15 @@ b,
 strong {
   font-family: -webkit-body;
 }
+
+article img {
+  margin: 1rem auto;
+}
+
+.anchor-3 {
+  margin-left: 0.75rem;
+}
+
+.anchor-4 {
+  margin-left: 1.5rem;
+}
