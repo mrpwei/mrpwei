@@ -3,6 +3,20 @@ title: "Git"
 date: "2022-06-09"
 ---
 
+## 基本操作
+
+### 查看分支
+
+```bash
+git branch -a
+```
+
+### 删除本地分支
+
+```bash
+git branch -d <BranchName>
+```
+
 ## git 修改 commit
 
 把上一次的 commit 记录去除，修改 commit 信息。
