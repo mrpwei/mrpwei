@@ -50,14 +50,14 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <img
-            src={require("/public/images/banner-2.svg")}
+            src="/images/banner-2.svg"
             alt="banner-2"
             width="600px"
             height="300px"
           />
         ) : (
           <img
-            src={require("/public/images/banner-3.svg")}
+            src="/images/banner-3.svg"
             alt="banner-3"
             width="600px"
             height="300px"
