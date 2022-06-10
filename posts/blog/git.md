@@ -11,6 +11,12 @@ date: "2022-06-09"
 git branch -a
 ```
 
+### 创建并切换到新分支
+
+```bash
+git checkout -b newBranch
+```
+
 ### 删除本地分支
 
 ```bash
