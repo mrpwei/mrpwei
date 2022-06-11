@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="description" content="Learn how to build a personal website using Next.js"/><meta property="og:image" content="https://og-image.vercel.app/Peng%20Wei&#x27;s%20blog.png?theme=light&amp;md=0&amp;fontSize=75px&amp;images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg"/><meta name="og:title" content="Peng Wei&#x27;s blog"/><meta name="twitter:card" content="summary_large_image"/><meta name="next-head-count" content="7"/><link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png"/><link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5"/><meta name="msapplication-TileColor" content="#000000"/><meta name="theme-color" content="#000000"/><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><link rel="preload" href="/_next/static/css/d3b1b7f96a6a2235.css" as="style"/><link rel="stylesheet" href="/_next/static/css/d3b1b7f96a6a2235.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/_next/static/chunks/webpack-9b312e20a4e32339.js" defer=""></script><script src="/_next/static/chunks/framework-a87821de553db91d.js" defer=""></script><script src="/_next/static/chunks/main-d8b1ff545a609496.js" defer=""></script><script src="/_next/static/chunks/pages/_app-7c85334a72c80150.js" defer=""></script><script src="/_next/static/chunks/771-5e4a02ed896d5599.js" defer=""></script><script src="/_next/static/chunks/pages/blog/%5B...slug%5D-afe30b32a3fa310b.js" defer=""></script><script src="/_next/static/KQFiyTTuYavoIRHpeDzIl/_buildManifest.js" defer=""></script><script src="/_next/static/KQFiyTTuYavoIRHpeDzIl/_ssgManifest.js" defer=""></script><script src="/_next/static/KQFiyTTuYavoIRHpeDzIl/_middlewareManifest.js" defer=""></script><style data-styled="" data-styled-version="5.3.5"></style></head><body class="bg-white text-black antialiased dark:bg-gray-900 dark:text-white"><div id="__next"><script>!function(){try{var d=document.documentElement,c=d.classList;c.remove('light','dark');var e=localStorage.getItem('theme');if('system'===e||(!e&&true)){var t='(prefers-color-scheme: dark)',m=window.matchMedia(t);if(m.media!==t||m.matches){d.style.colorScheme = 'dark';c.add('dark')}else{d.style.colorScheme = 'light';c.add('light')}}else if(e){c.add(e|| '')}if(e==='light'||e==='dark')d.style.colorScheme=e}catch(e){}}()</script><div class="max-w-3xl mx-auto"><nav class="flex items-center justify-between h-24"><div><a class="text-2xl leading-8 mx-3 bg-gradient-to-r from-sky-500 to-indigo-500" style="font-family:SourceCodePro-Regular;font-weight:600;-webkit-background-clip:text;color:transparent" href="/">Peng.wei</a></div><div class="mx-2"><a class="mx-2 leading-8" href="/">Home</a><a class="mx-2 leading-8" href="/blog">Blog</a><a class="mx-2 leading-8" href="/wiki">Wiki</a><button aria-label="Toggle Dark Mode" type="button" class="ml-1 mr-1 h-8 w-8 rounded p-1 sm:ml-4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-gray-900 dark:text-gray-100"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg></button></div></nav><main class="mx-3 mb-6"><main class="prose dark:prose-dark max-w-full"><h1 class="mb-0">Markdown Guide</h1><small class="text-gray-600 dark:text-gray-400"><time dateTime="2019-10-11">October 11, 2019</time></small><h1>Introduction</h1>
+<!-- --><p>Markdown and Mdx parsing is supported via <!-- --><code>unified</code>, and other remark and rehype packages. <!-- --><code>next-mdx-remote</code> allows us to parse <!-- --><code>.mdx</code> and <!-- --><code>.md</code> files in a more flexible manner without touching webpack.<!-- --></p>
+<!-- --><p>GitHub flavored markdown is used. <!-- --><code>mdx-prism</code> provides syntax highlighting capabilities for code blocks. Here&#x27;s a demo of how everything looks.<!-- --></p>
+<!-- --><p>The following markdown cheatsheet is adapted from: <!-- --><a href="https://guides.github.com/features/mastering-markdown/">https://guides.github.com/features/mastering-markdown/</a></p>
+<!-- --><h1>What is Markdown?</h1>
+<!-- --><p>Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like <!-- --><code>#</code> or <!-- --><code>*</code>.<!-- --></p>
+<!-- --><h1>Syntax guide</h1>
+<!-- --><p>Here’s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.</p>
+<!-- --><h2>Headers</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line"># This is a h1 tag
+</span><span class="code-line">
+</span><span class="code-line">## This is a h2 tag
+</span><span class="code-line">
+</span><span class="code-line">#### This is a h4 tag
+</span></code></pre>
+<!-- --><h1>This is a h1 tag</h1>
+<!-- --><h2>This is a h2 tag</h2>
+<!-- --><h4>This is a h4 tag</h4>
+<!-- --><h2>Emphasis</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">_This text will be italic_
+</span><span class="code-line">
+</span><span class="code-line">**This text will be bold**
+</span><span class="code-line">
+</span><span class="code-line">_You **can** combine them_
+</span></code></pre>
+<!-- --><p><em>This text will be italic</em></p>
+<!-- --><p><strong>This text will be bold</strong></p>
+<!-- --><p><em>You <!-- --><strong>can</strong> combine them<!-- --></em></p>
+<!-- --><h2>Lists</h2>
+<!-- --><h3>Unordered</h3>
+<!-- --><pre><code class="code-highlight"><span class="code-line">- Item 1
+</span><span class="code-line">- Item 2
+</span><span class="code-line">  - Item 2a
+</span><span class="code-line">  - Item 2b
+</span></code></pre>
+<!-- --><ul>
+<!-- --><li>Item 1</li>
+<!-- --><li>Item 2<!-- -->
+<!-- --><ul>
+<!-- --><li>Item 2a</li>
+<!-- --><li>Item 2b</li>
+<!-- --></ul>
+<!-- --></li>
+<!-- --></ul>
+<!-- --><h3>Ordered</h3>
+<!-- --><pre><code class="code-highlight"><span class="code-line">1. Item 1
+</span><span class="code-line">1. Item 2
+</span><span class="code-line">1. Item 3
+</span><span class="code-line">   1. Item 3a
+</span><span class="code-line">   1. Item 3b
+</span></code></pre>
+<!-- --><ol>
+<!-- --><li>Item 1</li>
+<!-- --><li>Item 2</li>
+<!-- --><li>Item 3<!-- -->
+<!-- --><ol>
+<!-- --><li>Item 3a</li>
+<!-- --><li>Item 3b</li>
+<!-- --></ol>
+<!-- --></li>
+<!-- --></ol>
+<!-- --><h2>Images</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+</span><span class="code-line">Format: ![Alt Text](url)
+</span></code></pre>
+<!-- --><p><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Logo"/></p>
+<!-- --><h2>Links</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">http://github.com - automatic!
+</span><span class="code-line">[GitHub](http://github.com)
+</span></code></pre>
+<!-- --><p><a href="http://github.com">http://github.com</a> - automatic!
+<!-- --><a href="http://github.com">GitHub</a></p>
+<!-- --><h2>Blockquotes</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">As Kanye West said:
+</span><span class="code-line">
+</span><span class="code-line">&gt; We&#x27;re living the future so
+</span><span class="code-line">&gt; the present is our past.
+</span></code></pre>
+<!-- --><p>As Kanye West said:</p>
+<!-- --><blockquote>
+<!-- --><p>We&#x27;re living the future so
+the present is our past.</p>
+<!-- --></blockquote>
+<!-- --><h2>Inline code</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">I think you should use an
+</span><span class="code-line">`&lt;addr&gt;` element here instead.
+</span></code></pre>
+<!-- --><p>I think you should use an
+<!-- --><code>&lt;addr&gt;</code> element here instead.<!-- --></p>
+<!-- --><h2>Syntax highlighting</h2>
+<!-- --><p>Here’s an example of how you can use syntax highlighting with <!-- --><a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/">GitHub Flavored Markdown</a>:<!-- --></p>
+<!-- --><pre><code class="code-highlight"><span class="code-line">```js:fancyAlert.js
+</span><span class="code-line">function fancyAlert(arg) {
+</span><span class="code-line">  if (arg) {
+</span><span class="code-line">    $.facebox({ div: &#x27;#foo&#x27; })
+</span><span class="code-line">  }
+</span><span class="code-line">}
+</span><span class="code-line">```
+</span></code></pre>
+<!-- --><p>And here&#x27;s how it looks - nicely colored with styled code titles!</p>
+<!-- --><pre><code class="language-js:fancyAlert.js code-highlight"><span class="code-line">function fancyAlert(arg) {
+</span><span class="code-line">  if (arg) {
+</span><span class="code-line">    $.facebox({ div: &#x27;#foo&#x27; })
+</span><span class="code-line">  }
+</span><span class="code-line">}
+</span></code></pre>
+<!-- --><h2>Footnotes</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">Here is a simple footnote[^1]. With some additional text after it.
+</span><span class="code-line">
+</span><span class="code-line">[^1]: My reference.
+</span></code></pre>
+<!-- --><p>Here is a simple footnote<!-- --><sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup>. With some additional text after it.<!-- --></p>
+<!-- --><h2>Task Lists</h2>
+<!-- --><pre><code class="code-highlight"><span class="code-line">- [x] list syntax required (any unordered or ordered list supported)
+</span><span class="code-line">- [x] this is a complete item
+</span><span class="code-line">- [ ] this is an incomplete item
+</span></code></pre>
+<!-- --><ul class="contains-task-list">
+<!-- --><li class="task-list-item"><input type="checkbox" disabled="" checked=""/> <!-- -->list syntax required (any unordered or ordered list supported)<!-- --></li>
+<!-- --><li class="task-list-item"><input type="checkbox" disabled="" checked=""/> <!-- -->this is a complete item<!-- --></li>
+<!-- --><li class="task-list-item"><input type="checkbox" disabled=""/> <!-- -->this is an incomplete item<!-- --></li>
+<!-- --></ul>
+<!-- --><h2>Tables</h2>
+<!-- --><p>You can create tables by assembling a list of words and dividing them with hyphens <!-- --><code>-</code> (for the first row), and then separating each column with a pipe <!-- --><code>|</code>:<!-- --></p>
+<!-- --><pre><code class="code-highlight"><span class="code-line">| First Header                | Second Header                |
+</span><span class="code-line">| --------------------------- | ---------------------------- |
+</span><span class="code-line">| Content from cell 1         | Content from cell 2          |
+</span><span class="code-line">| Content in the first column | Content in the second column |
+</span></code></pre>
+<!-- --><table><thead><tr><th>First Header</th><th>Second Header</th></tr></thead><tbody><tr><td>Content from cell 1</td><td>Content from cell 2</td></tr><tr><td>Content in the first column</td><td>Content in the second column</td></tr></tbody></table>
+<!-- --><h2>Strikethrough</h2>
+<!-- --><p>Any word wrapped with two tildes (like <!-- --><code>~~this~~</code>) will appear <!-- --><del>crossed out</del>.<!-- --></p>
+<!-- --><section data-footnotes="true" class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
+<!-- --><ol>
+<!-- --><li id="user-content-fn-1">
+<!-- --><p>My reference. <!-- --><a href="#user-content-fnref-1" data-footnote-backref="true" class="data-footnote-backref" aria-label="Back to content">↩</a></p>
+<!-- --></li>
+<!-- --></ol>
+<!-- --></section><a href="/blog">⬅️ Back to blog list</a></main></main></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"mdxSource":"var Component=(()=\u003e{var h=Object.create;var s=Object.defineProperty;var o=Object.getOwnPropertyDescriptor;var m=Object.getOwnPropertyNames;var p=Object.getPrototypeOf,u=Object.prototype.hasOwnProperty;var g=(i,l)=\u003e()=\u003e(l||i((l={exports:{}}).exports,l),l.exports),f=(i,l)=\u003e{for(var c in l)s(i,c,{get:l[c],enumerable:!0})},d=(i,l,c,n)=\u003e{if(l\u0026\u0026typeof l==\"object\"||typeof l==\"function\")for(let a of m(l))!u.call(i,a)\u0026\u0026a!==c\u0026\u0026s(i,a,{get:()=\u003el[a],enumerable:!(n=o(l,a))||n.enumerable});return i};var b=(i,l,c)=\u003e(c=i!=null?h(p(i)):{},d(l||!i||!i.__esModule?s(c,\"default\",{value:i,enumerable:!0}):c,i)),N=i=\u003ed(s({},\"__esModule\",{value:!0}),i);var r=g((H,t)=\u003e{t.exports=_jsx_runtime});var x={};f(x,{default:()=\u003ek,frontmatter:()=\u003ew});var e=b(r()),w={title:\"Markdown Guide\",date:\"2019-10-11\",tags:[\"github\",\"guide\"],draft:!1,summary:\"Markdown cheatsheet for all your blogging needs - headers, lists, images, tables and more! An illustrated guide based on GitHub Flavored Markdown.\"};function y(i={}){let{wrapper:l}=i.components||{};return l?(0,e.jsx)(l,Object.assign({},i,{children:(0,e.jsx)(c,{})})):c();function c(){let n=Object.assign({h1:\"h1\",p:\"p\",code:\"code\",a:\"a\",h2:\"h2\",pre:\"pre\",span:\"span\",h4:\"h4\",em:\"em\",strong:\"strong\",h3:\"h3\",ul:\"ul\",li:\"li\",ol:\"ol\",img:\"img\",blockquote:\"blockquote\",sup:\"sup\",input:\"input\",table:\"table\",thead:\"thead\",tr:\"tr\",th:\"th\",tbody:\"tbody\",td:\"td\",del:\"del\",section:\"section\"},i.components);return(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)(n.h1,{children:\"Introduction\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"Markdown and Mdx parsing is supported via \",(0,e.jsx)(n.code,{children:\"unified\"}),\", and other remark and rehype packages. \",(0,e.jsx)(n.code,{children:\"next-mdx-remote\"}),\" allows us to parse \",(0,e.jsx)(n.code,{children:\".mdx\"}),\" and \",(0,e.jsx)(n.code,{children:\".md\"}),\" files in a more flexible manner without touching webpack.\"]}),`\n`,(0,e.jsxs)(n.p,{children:[\"GitHub flavored markdown is used. \",(0,e.jsx)(n.code,{children:\"mdx-prism\"}),\" provides syntax highlighting capabilities for code blocks. Here's a demo of how everything looks.\"]}),`\n`,(0,e.jsxs)(n.p,{children:[\"The following markdown cheatsheet is adapted from: \",(0,e.jsx)(n.a,{href:\"https://guides.github.com/features/mastering-markdown/\",children:\"https://guides.github.com/features/mastering-markdown/\"})]}),`\n`,(0,e.jsx)(n.h1,{children:\"What is Markdown?\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"Markdown is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like \",(0,e.jsx)(n.code,{children:\"#\"}),\" or \",(0,e.jsx)(n.code,{children:\"*\"}),\".\"]}),`\n`,(0,e.jsx)(n.h1,{children:\"Syntax guide\"}),`\n`,(0,e.jsx)(n.p,{children:\"Here\\u2019s an overview of Markdown syntax that you can use anywhere on GitHub.com or in your own text files.\"}),`\n`,(0,e.jsx)(n.h2,{children:\"Headers\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`# This is a h1 tag\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`## This is a h2 tag\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`#### This is a h4 tag\n`})]})}),`\n`,(0,e.jsx)(n.h1,{children:\"This is a h1 tag\"}),`\n`,(0,e.jsx)(n.h2,{children:\"This is a h2 tag\"}),`\n`,(0,e.jsx)(n.h4,{children:\"This is a h4 tag\"}),`\n`,(0,e.jsx)(n.h2,{children:\"Emphasis\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`_This text will be italic_\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`**This text will be bold**\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`_You **can** combine them_\n`})]})}),`\n`,(0,e.jsx)(n.p,{children:(0,e.jsx)(n.em,{children:\"This text will be italic\"})}),`\n`,(0,e.jsx)(n.p,{children:(0,e.jsx)(n.strong,{children:\"This text will be bold\"})}),`\n`,(0,e.jsx)(n.p,{children:(0,e.jsxs)(n.em,{children:[\"You \",(0,e.jsx)(n.strong,{children:\"can\"}),\" combine them\"]})}),`\n`,(0,e.jsx)(n.h2,{children:\"Lists\"}),`\n`,(0,e.jsx)(n.h3,{children:\"Unordered\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`- Item 1\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`- Item 2\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`  - Item 2a\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`  - Item 2b\n`})]})}),`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsx)(n.li,{children:\"Item 1\"}),`\n`,(0,e.jsxs)(n.li,{children:[\"Item 2\",`\n`,(0,e.jsxs)(n.ul,{children:[`\n`,(0,e.jsx)(n.li,{children:\"Item 2a\"}),`\n`,(0,e.jsx)(n.li,{children:\"Item 2b\"}),`\n`]}),`\n`]}),`\n`]}),`\n`,(0,e.jsx)(n.h3,{children:\"Ordered\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`1. Item 1\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`1. Item 2\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`1. Item 3\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`   1. Item 3a\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`   1. Item 3b\n`})]})}),`\n`,(0,e.jsxs)(n.ol,{children:[`\n`,(0,e.jsx)(n.li,{children:\"Item 1\"}),`\n`,(0,e.jsx)(n.li,{children:\"Item 2\"}),`\n`,(0,e.jsxs)(n.li,{children:[\"Item 3\",`\n`,(0,e.jsxs)(n.ol,{children:[`\n`,(0,e.jsx)(n.li,{children:\"Item 3a\"}),`\n`,(0,e.jsx)(n.li,{children:\"Item 3b\"}),`\n`]}),`\n`]}),`\n`]}),`\n`,(0,e.jsx)(n.h2,{children:\"Images\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`![GitHub Logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`Format: ![Alt Text](url)\n`})]})}),`\n`,(0,e.jsx)(n.p,{children:(0,e.jsx)(n.img,{src:\"https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png\",alt:\"GitHub Logo\"})}),`\n`,(0,e.jsx)(n.h2,{children:\"Links\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`http://github.com - automatic!\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`[GitHub](http://github.com)\n`})]})}),`\n`,(0,e.jsxs)(n.p,{children:[(0,e.jsx)(n.a,{href:\"http://github.com\",children:\"http://github.com\"}),` - automatic!\n`,(0,e.jsx)(n.a,{href:\"http://github.com\",children:\"GitHub\"})]}),`\n`,(0,e.jsx)(n.h2,{children:\"Blockquotes\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`As Kanye West said:\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\u003e We're living the future so\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\u003e the present is our past.\n`})]})}),`\n`,(0,e.jsx)(n.p,{children:\"As Kanye West said:\"}),`\n`,(0,e.jsxs)(n.blockquote,{children:[`\n`,(0,e.jsx)(n.p,{children:`We're living the future so\nthe present is our past.`}),`\n`]}),`\n`,(0,e.jsx)(n.h2,{children:\"Inline code\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`I think you should use an\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:\"`\u003caddr\u003e` element here instead.\\n\"})]})}),`\n`,(0,e.jsxs)(n.p,{children:[`I think you should use an\n`,(0,e.jsx)(n.code,{children:\"\u003caddr\u003e\"}),\" element here instead.\"]}),`\n`,(0,e.jsx)(n.h2,{children:\"Syntax highlighting\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"Here\\u2019s an example of how you can use syntax highlighting with \",(0,e.jsx)(n.a,{href:\"https://help.github.com/articles/basic-writing-and-formatting-syntax/\",children:\"GitHub Flavored Markdown\"}),\":\"]}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:\"```js:fancyAlert.js\\n\"}),(0,e.jsx)(n.span,{className:\"code-line\",children:`function fancyAlert(arg) {\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`  if (arg) {\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`    $.facebox({ div: '#foo' })\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`  }\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`}\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:\"```\\n\"})]})}),`\n`,(0,e.jsx)(n.p,{children:\"And here's how it looks - nicely colored with styled code titles!\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"language-js:fancyAlert.js code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`function fancyAlert(arg) {\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`  if (arg) {\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`    $.facebox({ div: '#foo' })\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`  }\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`}\n`})]})}),`\n`,(0,e.jsx)(n.h2,{children:\"Footnotes\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`Here is a simple footnote[^1]. With some additional text after it.\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`[^1]: My reference.\n`})]})}),`\n`,(0,e.jsxs)(n.p,{children:[\"Here is a simple footnote\",(0,e.jsx)(n.sup,{children:(0,e.jsx)(n.a,{href:\"#user-content-fn-1\",id:\"user-content-fnref-1\",\"data-footnote-ref\":!0,\"aria-describedby\":\"footnote-label\",children:\"1\"})}),\". With some additional text after it.\"]}),`\n`,(0,e.jsx)(n.h2,{children:\"Task Lists\"}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`- [x] list syntax required (any unordered or ordered list supported)\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`- [x] this is a complete item\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`- [ ] this is an incomplete item\n`})]})}),`\n`,(0,e.jsxs)(n.ul,{className:\"contains-task-list\",children:[`\n`,(0,e.jsxs)(n.li,{className:\"task-list-item\",children:[(0,e.jsx)(n.input,{type:\"checkbox\",checked:!0,disabled:!0}),\" \",\"list syntax required (any unordered or ordered list supported)\"]}),`\n`,(0,e.jsxs)(n.li,{className:\"task-list-item\",children:[(0,e.jsx)(n.input,{type:\"checkbox\",checked:!0,disabled:!0}),\" \",\"this is a complete item\"]}),`\n`,(0,e.jsxs)(n.li,{className:\"task-list-item\",children:[(0,e.jsx)(n.input,{type:\"checkbox\",disabled:!0}),\" \",\"this is an incomplete item\"]}),`\n`]}),`\n`,(0,e.jsx)(n.h2,{children:\"Tables\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"You can create tables by assembling a list of words and dividing them with hyphens \",(0,e.jsx)(n.code,{children:\"-\"}),\" (for the first row), and then separating each column with a pipe \",(0,e.jsx)(n.code,{children:\"|\"}),\":\"]}),`\n`,(0,e.jsx)(n.pre,{children:(0,e.jsxs)(n.code,{className:\"code-highlight\",children:[(0,e.jsx)(n.span,{className:\"code-line\",children:`| First Header                | Second Header                |\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`| --------------------------- | ---------------------------- |\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`| Content from cell 1         | Content from cell 2          |\n`}),(0,e.jsx)(n.span,{className:\"code-line\",children:`| Content in the first column | Content in the second column |\n`})]})}),`\n`,(0,e.jsxs)(n.table,{children:[(0,e.jsx)(n.thead,{children:(0,e.jsxs)(n.tr,{children:[(0,e.jsx)(n.th,{children:\"First Header\"}),(0,e.jsx)(n.th,{children:\"Second Header\"})]})}),(0,e.jsxs)(n.tbody,{children:[(0,e.jsxs)(n.tr,{children:[(0,e.jsx)(n.td,{children:\"Content from cell 1\"}),(0,e.jsx)(n.td,{children:\"Content from cell 2\"})]}),(0,e.jsxs)(n.tr,{children:[(0,e.jsx)(n.td,{children:\"Content in the first column\"}),(0,e.jsx)(n.td,{children:\"Content in the second column\"})]})]})]}),`\n`,(0,e.jsx)(n.h2,{children:\"Strikethrough\"}),`\n`,(0,e.jsxs)(n.p,{children:[\"Any word wrapped with two tildes (like \",(0,e.jsx)(n.code,{children:\"~~this~~\"}),\") will appear \",(0,e.jsx)(n.del,{children:\"crossed out\"}),\".\"]}),`\n`,(0,e.jsxs)(n.section,{\"data-footnotes\":!0,className:\"footnotes\",children:[(0,e.jsx)(n.h2,{id:\"footnote-label\",className:\"sr-only\",children:\"Footnotes\"}),`\n`,(0,e.jsxs)(n.ol,{children:[`\n`,(0,e.jsxs)(n.li,{id:\"user-content-fn-1\",children:[`\n`,(0,e.jsxs)(n.p,{children:[\"My reference. \",(0,e.jsx)(n.a,{href:\"#user-content-fnref-1\",\"data-footnote-backref\":!0,className:\"data-footnote-backref\",\"aria-label\":\"Back to content\",children:\"\\u21A9\"})]}),`\n`]}),`\n`]}),`\n`]})]})}}var k=y;return N(x);})();\n;return Component;","toc":[],"frontMatter":{"slug":"github-markdown-guide","fileName":"github-markdown-guide.mdx","title":"Markdown Guide","date":"2019-10-11","tags":["github","guide"],"draft":false,"summary":"Markdown cheatsheet for all your blogging needs - headers, lists, images, tables and more! An illustrated guide based on GitHub Flavored Markdown."}}},"__N_SSG":true},"page":"/blog/[...slug]","query":{"slug":["github-markdown-guide"]},"buildId":"KQFiyTTuYavoIRHpeDzIl","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
