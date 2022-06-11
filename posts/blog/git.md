@@ -1,6 +1,8 @@
 ---
 title: "Git"
 date: "2022-06-09"
+summary: "useful git concepts and commands"
+tags: ["guide"]
 ---
 
 ## 基本操作
@@ -38,8 +40,8 @@ git commit --amend
 - git reset 或 git reset --mixed commit_hash // 不带参数,或带参数–mixed(默认参数)，与 git reset --soft 不同，它将会把差异放到工作区
 
 ```bash
-$ git reset --hard/soft HEAD^         回退到上个版本
-$ git reset --hard/soft HEAD~3        回退到前3次提交之前，以此类推，回退到n次提交之前
+git reset --hard/soft HEAD^         回退到上个版本
+git reset --hard/soft HEAD~3        回退到前3次提交之前，以此类推，回退到n次提交之前
 ```
 
 回退后强推到远程

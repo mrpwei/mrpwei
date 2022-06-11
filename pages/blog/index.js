@@ -1,35 +1,26 @@
-import Head from "next/head";
-import Layout, { siteTitle } from "../../components/layout";
-import utilStyles from "../../styles/utils.module.css";
-import { getSortedPostsData } from "../../lib/posts";
-import { BlogCard } from "../../components/BlogCard";
+import ListLayout from "/components/Layout/ListLayout";
+import { getAllFilesFrontMatter } from "/lib/mdx";
+
+export const POSTS_PER_PAGE = 5;
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
+  const posts = await getAllFilesFrontMatter("blog");
+  const initialDisplayPosts = posts.slice(0, POSTS_PER_PAGE);
+  const pagination = {
+    currentPage: 1,
+    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
   };
+
+  return { props: { initialDisplayPosts, posts, pagination } };
 }
 
-export default function Blog({ allPostsData }) {
+export default function Blog({ posts, initialDisplayPosts, pagination }) {
   return (
-    <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
-      <section>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <div className="flex-auto">
-          {allPostsData.map(({ id, date, title, excerpt }) => (
-            <BlogCard id={id} date={date} title={title} key={id}>
-              {excerpt}
-            </BlogCard>
-          ))}
-        </div>
-      </section>
-      <img src="/images/divider-2.svg" />
-    </Layout>
+    <ListLayout
+      posts={posts}
+      initialDisplayPosts={initialDisplayPosts}
+      pagination={pagination}
+      title="All Posts"
+    />
   );
 }
