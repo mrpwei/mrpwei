@@ -8,7 +8,7 @@ export const Header = () => {
       <Center>
         <Logo>
           <Link href="/">
-            <a>What's Next?!</a>
+            <a>{"What's Next?!"}</a>
           </Link>
         </Logo>
       </Center>

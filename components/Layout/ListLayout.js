@@ -26,7 +26,10 @@ export default function ListLayout({
                 </Link>
                 <div>
                   {tags.map((tag) => (
-                    <span className="mr-4 rounded-md text-sm text-primary-500">
+                    <span
+                      key={tag}
+                      className="mr-4 rounded-md text-sm text-primary-500"
+                    >
                       {tag.toUpperCase()}
                     </span>
                   ))}

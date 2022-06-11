@@ -19,7 +19,7 @@ export default function Home({ posts }) {
         <title>{siteTitle}</title>
       </Head>
       <section className="mb-6 text-gray-600 dark:text-gray-400">
-        <p>I'm a frontend programmer.</p>
+        <p>{"I'm a frontend programmer."}</p>
         <p>
           This is my personal website - my notes and blogs. For more info, visit
           my <a href="https://github.com/mrpwei">github</a>.
@@ -42,7 +42,10 @@ export default function Home({ posts }) {
                 </Link>
                 <div>
                   {tags.map((tag) => (
-                    <span className="mr-4 rounded-md text-sm text-primary-500">
+                    <span
+                      key={tag}
+                      className="mr-4 rounded-md text-sm text-primary-500"
+                    >
                       {tag.toUpperCase()}
                     </span>
                   ))}
