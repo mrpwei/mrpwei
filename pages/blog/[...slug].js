@@ -1,8 +1,12 @@
-import { formatSlug, getFiles, getFileBySlug } from "/lib/mdx";
-import { getMDXComponent } from "mdx-bundler/client";
-import { useMemo } from "react";
-import Link from "next/link";
-import Date from "/components/date";
+import {
+  formatSlug,
+  getAllFilesFrontMatter,
+  getFiles,
+  getFileBySlug,
+} from "/lib/mdx";
+import { MDXLayoutRenderer } from "../../components/MDXComponents";
+
+const DEFAULT_LAYOUT = "PostLayout";
 
 export async function getStaticPaths() {
   const posts = getFiles("blog");
@@ -17,21 +21,36 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const allPosts = await getAllFilesFrontMatter("blog");
+  const postIndex = allPosts.findIndex(
+    (post) => formatSlug(post.slug) === params.slug.join("/")
+  );
+  const prev = allPosts[postIndex + 1] || null;
+  const next = allPosts[postIndex - 1] || null;
   const post = await getFileBySlug("blog", params.slug.join("/"));
   return {
     props: {
       post,
+      prev,
+      next,
     },
   };
 }
 
-export default function Blog({ post }) {
-  const { mdxSource, frontMatter } = post;
-  const { title, date } = frontMatter;
-  const Component = useMemo(() => getMDXComponent(mdxSource), [mdxSource]);
+export default function Blog({ post, prev, next }) {
+  const { mdxSource, toc, frontMatter } = post;
+
   return (
     <>
-      <main className="prose dark:prose-dark max-w-full">
+      <MDXLayoutRenderer
+        layout={DEFAULT_LAYOUT}
+        mdxSource={mdxSource}
+        toc={toc}
+        frontMatter={frontMatter}
+        prev={prev}
+        next={next}
+      />
+      {/* <main className="prose dark:prose-dark max-w-full">
         <h1 className="mb-0">{title}</h1>
         <small className="text-gray-600 dark:text-gray-400">
           <Date dateString={date} />
@@ -40,7 +59,7 @@ export default function Blog({ post }) {
         <Link href="/blog">
           <a>⬅️ Back to blog list</a>
         </Link>
-      </main>
+      </main> */}
     </>
   );
 }
